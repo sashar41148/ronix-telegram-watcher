@@ -1,1 +1,53 @@
-{}
+{
+  "products": {
+    "https://www.ronix.ir/product/180mm-angle-grinder/": {
+      "url": "https://www.ronix.ir/product/180mm-angle-grinder/",
+      "title": "فرز سوپر آهنگری 180میلی‌متر 2800وات",
+      "model": "3270",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "b0d79cda774fff4b5d0a775bf5d14ac653a38a3b7d245235f97f28000cb35009"
+    },
+    "https://www.ronix.ir/product/20-1200-5620/": {
+      "url": "https://www.ronix.ir/product/20-1200-5620/",
+      "title": "اره میزی کاشی بر 20سانتی متری-800 وات",
+      "model": "5620",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "d501ce83be8d425d4348e8a8607c5192a641ee1cfddce7c532b10fe730d40729"
+    },
+    "https://www.ronix.ir/product/200-850-2450/": {
+      "url": "https://www.ronix.ir/product/200-850-2450/",
+      "title": "میکسر برقی بتن 200 لیتری 850 وات 2450",
+      "model": "2450",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "eab102db17e31bc934198b050824e9fbef07e6a235cb5e7d67eb8f4f5a0bffec"
+    },
+    "https://www.ronix.ir/product/2000/": {
+      "url": "https://www.ronix.ir/product/2000/",
+      "title": "سشوار صنعتی برقی 2000 وات-4نازل-المنت سرامیکی",
+      "model": "1105",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "678ee8325de7534ea4a1dec2265c10523831ee0aea22a4080b9bb806842394b6"
+    },
+    "https://www.ronix.ir/product/230mm-angle-grinder/": {
+      "url": "https://www.ronix.ir/product/230mm-angle-grinder/",
+      "title": "فرز سنگبری 230میلی‌متر 2800وات",
+      "model": "3280",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "20dbd140e403be5faac0850841c480cd92b4e28ad3ee5982afbc3e74a674b475"
+    },
+    "https://www.ronix.ir/product/30-2000-5621/": {
+      "url": "https://www.ronix.ir/product/30-2000-5621/",
+      "title": "اره میزی کاشی بر 30سانتی متری- 1500وات",
+      "model": "5621",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "52b4e49585744796ccee074b8d0c88e831116347c86e5d8571afb9302fb92b1e"
+    },
+    "https://www.ronix.ir/product/38-1600-4400/": {
+      "url": "https://www.ronix.ir/product/38-1600-4400/",
+      "title": "چمن زن برقی 38سانتی 1600وات موتور دینامی 4400",
+      "model": "4400",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "582c2e764c5ed6de479b0ef7b354489a6f9c573529d31e72375d31605a8ad45f"
+    }
+  }
+}
