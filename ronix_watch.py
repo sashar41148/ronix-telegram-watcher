@@ -1,4 +1,4 @@
-import os, re, json, time, hashlib
+import os, re, json, time, hashlib, random
 from urllib.parse import urljoin, urlparse
 
 import requests
@@ -13,9 +13,15 @@ CHANNEL_ID = os.getenv("TG_CHANNEL_ID")  # @ir_ronix
 PRICE_BOT = "@SsAaSsHhAaRr_bot"
 PV_LINE = f"\n💬 برای استعلام قیمت به ربات پیام بدین\n{PRICE_BOT}"
 
-# Batch control (برای اینکه بار اول مرحله‌ای پر بشه)
-BATCH_SIZE = int(os.getenv("BATCH_SIZE", "30"))          # چند محصول در هر اجرا
-MAX_POSTS_PER_RUN = int(os.getenv("MAX_POSTS_PER_RUN", "30"))  # چند پست در هر اجرا
+# ✅ Batch control
+BATCH_SIZE = int(os.getenv("BATCH_SIZE", "10"))                 # چند محصول در هر اجرا
+MAX_POSTS_PER_RUN = int(os.getenv("MAX_POSTS_PER_RUN", "10"))   # چند پست در هر اجرا
+
+# ✅ Delay control (قابل تنظیم از env هم هست)
+LIST_PAGE_SLEEP = float(os.getenv("LIST_PAGE_SLEEP", "2.0"))
+PRODUCT_SLEEP_NORMAL = float(os.getenv("PRODUCT_SLEEP_NORMAL", "2.0"))
+PRODUCT_SLEEP_EVERY10 = float(os.getenv("PRODUCT_SLEEP_EVERY10", "3.5"))
+TG_SEND_SLEEP = float(os.getenv("TG_SEND_SLEEP", "2.0"))
 
 if not BOT_TOKEN or not CHANNEL_ID:
     raise SystemExit("Missing TG_BOT_TOKEN or TG_CHANNEL_ID (set as GitHub Secrets).")
@@ -27,6 +33,10 @@ session.headers.update({
     "Accept-Language": "fa-IR,fa;q=0.9,en-US;q=0.7,en;q=0.6",
     "Connection": "keep-alive",
 })
+
+def _sleep(base: float):
+    # jitter برای طبیعی‌تر شدن درخواست‌ها
+    time.sleep(base + random.uniform(0.0, 0.7))
 
 def load_state():
     if os.path.exists(STATE_PATH):
@@ -64,17 +74,31 @@ def tg_send_photo(photo_url, caption):
     if not r.ok:
         tg_send_message(caption)
 
-# ✅ مقاوم‌سازی: Timeout بیشتر + Retry + Backoff
 def fetch(url: str) -> str:
+    """
+    ✅ مقاوم‌تر:
+    - 5 تلاش
+    - backoff افزایشی
+    - هندل بهتر برای timeout/429/5xx
+    """
     last_err = None
-    for attempt in range(1, 4):  # 3 tries
+    for attempt in range(1, 6):  # 5 tries
         try:
             r = session.get(url, timeout=90)
+
+            # اگر ریت‌لیمیت یا خطای سرور بود، retry
+            if r.status_code in (429, 500, 502, 503, 504):
+                raise requests.HTTPError(f"HTTP {r.status_code}", response=r)
+
             r.raise_for_status()
             return r.text
+
         except Exception as e:
             last_err = e
-            time.sleep(2 * attempt)  # 2s, 4s, 6s
+            wait = min(4 * attempt, 18)  # 4s, 8s, 12s, 16s, 18s
+            print(f"FETCH RETRY {attempt}/5: {url} -> {e} | sleep {wait}s")
+            _sleep(wait)
+
     raise last_err
 
 def normalize_url(u: str) -> str:
@@ -90,6 +114,7 @@ def extract_product_links_from_list(html: str, base_url: str):
         href = (a.get("href") or "").strip()
         if not href:
             continue
+
         abs_u = urljoin(base_url, href)
 
         if "/product/" in href:
@@ -141,7 +166,6 @@ def crawl_all_products(start_url: str, max_pages: int = 60):
             continue
         seen_pages.add(page_url)
 
-        # ✅ اگر لیست صفحه هم خطا داد، کل برنامه نخوابه
         try:
             html = fetch(page_url)
         except Exception as e:
@@ -157,7 +181,7 @@ def crawl_all_products(start_url: str, max_pages: int = 60):
             if urlparse(pl).netloc == "www.ronix.ir":
                 to_visit_pages.append(pl)
 
-        time.sleep(1.2)
+        _sleep(LIST_PAGE_SLEEP)
 
     return sorted(product_urls)
 
@@ -168,11 +192,13 @@ def main():
 
     product_list = crawl_all_products(BASE_LIST_URL)
 
-    # اگر cursor از طول لیست رد شده بود، ریست
+    if not product_list:
+        tg_send_message("⚠️ نتونستم لیست محصولات رو بگیرم (احتمالاً سایت کند/بلاک). دفعه بعد دوباره تلاش می‌کنم.")
+        return
+
     if cursor >= len(product_list):
         cursor = 0
 
-    # ✅ هر اجرا فقط یک Batch پردازش می‌کند
     batch = product_list[cursor: cursor + BATCH_SIZE]
     if not batch:
         cursor = 0
@@ -184,7 +210,6 @@ def main():
     changes_to_post = []
 
     for idx, url in enumerate(batch, start=1):
-        # ✅ اگر یک محصول لود نشد، کل اجرا Fail نشه
         try:
             info = parse_product_page(url)
         except Exception as e:
@@ -192,9 +217,6 @@ def main():
             continue
 
         old = prev.get(url)
-
-        # منطق: اگر قبلاً تو state نبود → NEW
-        # اگر fingerprint عوض شده → CHANGED
         if old is None:
             changes_to_post.append(("NEW", info))
         elif old.get("fingerprint") != info["fingerprint"]:
@@ -202,9 +224,12 @@ def main():
 
         prev[url] = info
 
-        time.sleep(1.2 if idx % 10 else 2.0)
+        # ✅ sleep بیشتر برای کاهش timeout
+        if idx % 10 == 0:
+            _sleep(PRODUCT_SLEEP_EVERY10)
+        else:
+            _sleep(PRODUCT_SLEEP_NORMAL)
 
-    # ✅ cursor جلو می‌رود تا دفعه بعد ادامه بدهد
     state["cursor"] = cursor + len(batch)
     state["products"] = prev
     save_state(state)
@@ -213,7 +238,6 @@ def main():
         tg_send_message("✅ اسکن انجام شد؛ مورد جدید/تغییری در این batch پیدا نشد.")
         return
 
-    # ✅ محدودیت ارسال هر اجرا
     changes_to_post = changes_to_post[:MAX_POSTS_PER_RUN]
 
     for kind, info in changes_to_post:
@@ -226,7 +250,7 @@ def main():
         else:
             tg_send_message(caption)
 
-        time.sleep(1.5)
+        _sleep(TG_SEND_SLEEP)
 
 if __name__ == "__main__":
     main()
