@@ -18,10 +18,10 @@ BATCH_SIZE = int(os.getenv("BATCH_SIZE", "10"))                 # چند محص�
 MAX_POSTS_PER_RUN = int(os.getenv("MAX_POSTS_PER_RUN", "10"))   # چند پست در هر اجرا
 
 # ✅ Delay control (قابل تنظیم از env هم هست)
-LIST_PAGE_SLEEP = float(os.getenv("LIST_PAGE_SLEEP", "2.0"))
-PRODUCT_SLEEP_NORMAL = float(os.getenv("PRODUCT_SLEEP_NORMAL", "2.0"))
-PRODUCT_SLEEP_EVERY10 = float(os.getenv("PRODUCT_SLEEP_EVERY10", "3.5"))
-TG_SEND_SLEEP = float(os.getenv("TG_SEND_SLEEP", "2.0"))
+LIST_PAGE_SLEEP = float(os.getenv("LIST_PAGE_SLEEP", "2.5"))
+PRODUCT_SLEEP_NORMAL = float(os.getenv("PRODUCT_SLEEP_NORMAL", "2.5"))
+PRODUCT_SLEEP_EVERY10 = float(os.getenv("PRODUCT_SLEEP_EVERY10", "4.0"))
+TG_SEND_SLEEP = float(os.getenv("TG_SEND_SLEEP", "2.5"))
 
 if not BOT_TOKEN or not CHANNEL_ID:
     raise SystemExit("Missing TG_BOT_TOKEN or TG_CHANNEL_ID (set as GitHub Secrets).")
