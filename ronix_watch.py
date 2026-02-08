@@ -13,6 +13,10 @@ CHANNEL_ID = os.getenv("TG_CHANNEL_ID")  # @ir_ronix
 PRICE_BOT = "@SsAaSsHhAaRr_bot"
 PV_LINE = f"\n💬 برای استعلام قیمت به ربات پیام بدین\n{PRICE_BOT}"
 
+# Batch control (برای اینکه بار اول مرحله‌ای پر بشه)
+BATCH_SIZE = int(os.getenv("BATCH_SIZE", "30"))          # چند محصول در هر اجرا
+MAX_POSTS_PER_RUN = int(os.getenv("MAX_POSTS_PER_RUN", "30"))  # چند پست در هر اجرا
+
 if not BOT_TOKEN or not CHANNEL_ID:
     raise SystemExit("Missing TG_BOT_TOKEN or TG_CHANNEL_ID (set as GitHub Secrets).")
 
@@ -29,11 +33,13 @@ def load_state():
         with open(STATE_PATH, "r", encoding="utf-8") as f:
             try:
                 data = json.load(f)
-                if isinstance(data, dict) and "products" in data:
+                if isinstance(data, dict):
+                    data.setdefault("products", {})
+                    data.setdefault("cursor", 0)
                     return data
             except json.JSONDecodeError:
                 pass
-    return {"products": {}}
+    return {"products": {}, "cursor": 0}
 
 def save_state(state):
     with open(STATE_PATH, "w", encoding="utf-8") as f:
@@ -158,13 +164,26 @@ def crawl_all_products(start_url: str, max_pages: int = 60):
 def main():
     state = load_state()
     prev = state.get("products", {})
-    first_run = (len(prev) == 0)
+    cursor = int(state.get("cursor", 0))
 
     product_list = crawl_all_products(BASE_LIST_URL)
 
+    # اگر cursor از طول لیست رد شده بود، ریست
+    if cursor >= len(product_list):
+        cursor = 0
+
+    # ✅ هر اجرا فقط یک Batch پردازش می‌کند
+    batch = product_list[cursor: cursor + BATCH_SIZE]
+    if not batch:
+        cursor = 0
+        batch = product_list[:BATCH_SIZE]
+
+    print(f"Total products discovered: {len(product_list)}")
+    print(f"Cursor: {cursor} | Batch size: {len(batch)}")
+
     changes_to_post = []
 
-    for idx, url in enumerate(product_list, start=1):
+    for idx, url in enumerate(batch, start=1):
         # ✅ اگر یک محصول لود نشد، کل اجرا Fail نشه
         try:
             info = parse_product_page(url)
@@ -174,27 +193,28 @@ def main():
 
         old = prev.get(url)
 
-        if first_run:
+        # منطق: اگر قبلاً تو state نبود → NEW
+        # اگر fingerprint عوض شده → CHANGED
+        if old is None:
             changes_to_post.append(("NEW", info))
-        else:
-            if old is None:
-                changes_to_post.append(("NEW", info))
-            elif old.get("fingerprint") != info["fingerprint"]:
-                changes_to_post.append(("CHANGED", info))
+        elif old.get("fingerprint") != info["fingerprint"]:
+            changes_to_post.append(("CHANGED", info))
 
         prev[url] = info
 
         time.sleep(1.2 if idx % 10 else 2.0)
 
+    # ✅ cursor جلو می‌رود تا دفعه بعد ادامه بدهد
+    state["cursor"] = cursor + len(batch)
     state["products"] = prev
     save_state(state)
 
     if not changes_to_post:
-        tg_send_message("✅ اسکن روزانه انجام شد؛ تغییری پیدا نشد.")
+        tg_send_message("✅ اسکن انجام شد؛ مورد جدید/تغییری در این batch پیدا نشد.")
         return
 
-    max_posts = int(os.getenv("MAX_POSTS_PER_RUN", "40"))
-    changes_to_post = changes_to_post[:max_posts]
+    # ✅ محدودیت ارسال هر اجرا
+    changes_to_post = changes_to_post[:MAX_POSTS_PER_RUN]
 
     for kind, info in changes_to_post:
         header = "🆕 محصول جدید" if kind == "NEW" else "♻️ بروزرسانی محصول"
