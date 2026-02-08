@@ -48,6 +48,63 @@
       "model": "4400",
       "img": "/img/media/static-pages/image-not-found-og.webp",
       "fingerprint": "582c2e764c5ed6de479b0ef7b354489a6f9c573529d31e72375d31605a8ad45f"
+    },
+    "https://www.ronix.ir/product/750/": {
+      "url": "https://www.ronix.ir/product/750/",
+      "title": "سنباده زن دیواری 810 وات",
+      "model": "6201",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "ccc9c567f73c0b035add1369e9f4daf4f01fb5b9e99d50adf1c2f12ab1385804"
+    },
+    "https://www.ronix.ir/product/8-square-file/": {
+      "url": "https://www.ronix.ir/product/8-square-file/",
+      "title": "سوهان چهارگوش",
+      "model": "RH-2504",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "182e853b4c1adb2160686fe887fc090f6e2b8e9958934f8c3aaeec87eeda7186"
+    },
+    "https://www.ronix.ir/product/800-rp-0800/": {
+      "url": "https://www.ronix.ir/product/800-rp-0800/",
+      "title": "فرش شوی و مبل شوی 800 وات RP-0800",
+      "model": "RP-0800",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "85d710d7b2bb1ea570a65e73fa8700629c6d5d7cd012366b0f0e547e30aa8d26"
+    },
+    "https://www.ronix.ir/product/mini-angel-grinder-1200w-115mm/": {
+      "url": "https://www.ronix.ir/product/mini-angel-grinder-1200w-115mm/",
+      "title": "مینی فرز 1200 وات 115 میلی متری",
+      "model": "3101",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "c9e388860b0599f7f12715f36672d06ab60b1edb9a8f42d8ada5a3f54ca078e3"
+    },
+    "https://www.ronix.ir/product/submersible-pump-400w-8m/": {
+      "url": "https://www.ronix.ir/product/submersible-pump-400w-8m/",
+      "title": "پمپ کف کش پلاستیکی 8 متری 400 وات",
+      "model": "RH-4036",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "b959f8272ec5b9e6df5db09267b118ceff481e8c317a5abba15f14af4974713f"
+    },
+    "https://www.ronix.ir/product/submersible-pump-750w-8-5m/": {
+      "url": "https://www.ronix.ir/product/submersible-pump-750w-8-5m/",
+      "title": "پمپ کف کش پلاستیکی 8.5 متری 750 وات",
+      "model": "RH-4037",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "c3abb9c07449c70a3da3aeec611edfe28454fbd9b38d02fd5767812deda7e81b"
+    },
+    "https://www.ronix.ir/product/submersible-sewage-pump-750w-8-5m/": {
+      "url": "https://www.ronix.ir/product/submersible-sewage-pump-750w-8-5m/",
+      "title": "پمپ لجن کش پلاستیکی 8.5متری 750وات",
+      "model": "RH-4042",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "67b7b47392e3326356b2a9659e698a7c6bc5b217f061f0026da8722ff1ed60ad"
+    },
+    "https://www.ronix.ir/product/submersible-sewage-pump-900w-8-5m/": {
+      "url": "https://www.ronix.ir/product/submersible-sewage-pump-900w-8-5m/",
+      "title": "پمپ لجن کش پلاستیکی 8.5متری 900وات",
+      "model": "RH-4043",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "9e7b16e999cfc5d1715bed209adfcdad39eb4056aaebbc23ef0463406e89a033"
     }
-  }
+  },
+  "cursor": 15
 }
