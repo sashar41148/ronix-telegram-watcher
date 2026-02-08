@@ -37,12 +37,17 @@ jobs:
 
       - name: Commit updated state
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # همیشه آخرین تغییرات ریموت رو بگیر تا push رد نشه
+          git pull --rebase origin main
+
           if git diff --quiet; then
             echo "No changes to commit."
             exit 0
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add state.json
-          git commit -m "Update state.json"
+          git commit -m "Update state.json" || echo "Nothing to commit"
           git push
