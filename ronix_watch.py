@@ -18,7 +18,10 @@ if not BOT_TOKEN or not CHANNEL_ID:
 
 session = requests.Session()
 session.headers.update({
-    "User-Agent": "Mozilla/5.0 (compatible; RonixWatcher/1.0)"
+    "User-Agent": "Mozilla/5.0 (compatible; RonixWatcher/1.0)",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "fa-IR,fa;q=0.9,en-US;q=0.7,en;q=0.6",
+    "Connection": "keep-alive",
 })
 
 def load_state():
@@ -55,10 +58,18 @@ def tg_send_photo(photo_url, caption):
     if not r.ok:
         tg_send_message(caption)
 
+# ✅ مقاوم‌سازی: Timeout بیشتر + Retry + Backoff
 def fetch(url: str) -> str:
-    r = session.get(url, timeout=40)
-    r.raise_for_status()
-    return r.text
+    last_err = None
+    for attempt in range(1, 4):  # 3 tries
+        try:
+            r = session.get(url, timeout=90)
+            r.raise_for_status()
+            return r.text
+        except Exception as e:
+            last_err = e
+            time.sleep(2 * attempt)  # 2s, 4s, 6s
+    raise last_err
 
 def normalize_url(u: str) -> str:
     p = urlparse(u)
@@ -124,7 +135,13 @@ def crawl_all_products(start_url: str, max_pages: int = 60):
             continue
         seen_pages.add(page_url)
 
-        html = fetch(page_url)
+        # ✅ اگر لیست صفحه هم خطا داد، کل برنامه نخوابه
+        try:
+            html = fetch(page_url)
+        except Exception as e:
+            print(f"SKIP LIST PAGE (failed): {page_url} -> {e}")
+            continue
+
         products, page_links = extract_product_links_from_list(html, page_url)
 
         for p in products:
@@ -134,7 +151,7 @@ def crawl_all_products(start_url: str, max_pages: int = 60):
             if urlparse(pl).netloc == "www.ronix.ir":
                 to_visit_pages.append(pl)
 
-        time.sleep(1.0)
+        time.sleep(1.2)
 
     return sorted(product_urls)
 
@@ -148,7 +165,13 @@ def main():
     changes_to_post = []
 
     for idx, url in enumerate(product_list, start=1):
-        info = parse_product_page(url)
+        # ✅ اگر یک محصول لود نشد، کل اجرا Fail نشه
+        try:
+            info = parse_product_page(url)
+        except Exception as e:
+            print(f"SKIP PRODUCT (failed): {url} -> {e}")
+            continue
+
         old = prev.get(url)
 
         if first_run:
