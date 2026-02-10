@@ -104,7 +104,14 @@
       "model": "RH-4043",
       "img": "/img/media/static-pages/image-not-found-og.webp",
       "fingerprint": "9e7b16e999cfc5d1715bed209adfcdad39eb4056aaebbc23ef0463406e89a033"
+    },
+    "https://www.ronix.ir/product/230/": {
+      "url": "https://www.ronix.ir/product/230/",
+      "title": "کارواش صنعتی 230 بار",
+      "model": "RP-0230",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "6985d79ef07f6aae4d4a8109cdcb989c0419ca74936038c0a3b718d9e8247b6f"
     }
   },
-  "cursor": 15
+  "cursor": 10
 }
