@@ -111,7 +111,42 @@
       "model": "RP-0230",
       "img": "/img/media/static-pages/image-not-found-og.webp",
       "fingerprint": "6985d79ef07f6aae4d4a8109cdcb989c0419ca74936038c0a3b718d9e8247b6f"
+    },
+    "https://www.ronix.ir/product/electric-corded-drill-10mm-400w-vega-series-2114/": {
+      "url": "https://www.ronix.ir/product/electric-corded-drill-10mm-400w-vega-series-2114/",
+      "title": "دریل برقی آچاری 10میلی متری-400 وات",
+      "model": "2114",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "bc5b9b8f3054566e7a31594c140d4ce56391a42af98fb7b529092a6cec73cc83"
+    },
+    "https://www.ronix.ir/product/electric-corded-drill-10mm-480w-2111/": {
+      "url": "https://www.ronix.ir/product/electric-corded-drill-10mm-480w-2111/",
+      "title": "دریل برقی 10میلی متری-480 وات",
+      "model": "2111",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "72f32ff848050d883736a915e0cea36d775584cfff70be8ad44bdeeae335eb51"
+    },
+    "https://www.ronix.ir/product/electric-corded-drill-6-5mm-2107/": {
+      "url": "https://www.ronix.ir/product/electric-corded-drill-6-5mm-2107/",
+      "title": "دریل برقی آچاری 6.5میلی‌متری-400 وات",
+      "model": "2107",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "fd3c9f4da2e5fb397aae17ad2a64474909f60b527d6a859b855854a0cdeb6b5c"
+    },
+    "https://www.ronix.ir/product/hvlp-electric-spray-gun-650w-1365/": {
+      "url": "https://www.ronix.ir/product/hvlp-electric-spray-gun-650w-1365/",
+      "title": "پیستوله برقی 650وات HVLP",
+      "model": "1365",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "376b75f5ac7b02785c8c8fd341b01d5831fc90df09b8213e4a9a154cae54d9b4"
+    },
+    "https://www.ronix.ir/product/hvlp-electric-spray-gun-950w-1395/": {
+      "url": "https://www.ronix.ir/product/hvlp-electric-spray-gun-950w-1395/",
+      "title": "پیستوله برقی 950 وات خرطومی HVLP",
+      "model": "1395",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "510636ea059fc54d017fc29fa60cb843d8a8c732726e1a0621de0eb95cc76567"
     }
   },
-  "cursor": 10
+  "cursor": 15
 }
