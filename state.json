@@ -146,7 +146,77 @@
       "model": "1395",
       "img": "/img/media/static-pages/image-not-found-og.webp",
       "fingerprint": "510636ea059fc54d017fc29fa60cb843d8a8c732726e1a0621de0eb95cc76567"
+    },
+    "https://www.ronix.ir/product/corded-impact-drill-10mm-400w-vega-series-2121/": {
+      "url": "https://www.ronix.ir/product/corded-impact-drill-10mm-400w-vega-series-2121/",
+      "title": "دریل چکشی 10میلی متر-450وات-آچاری",
+      "model": "2121",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "b067121aef8b55edd9515cca10c587974e99d87ceae5550e5815d9e13fed1c80"
+    },
+    "https://www.ronix.ir/product/corded-impact-drill-10mm-750w-2120/": {
+      "url": "https://www.ronix.ir/product/corded-impact-drill-10mm-750w-2120/",
+      "title": "دریل چکشی 10میلی متر-750وات-آچاری",
+      "model": "2120",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "c2746792d7f4d96d50e199c320d1401211bf369bcda551f09eb6b61f2b52c82e"
+    },
+    "https://www.ronix.ir/product/corded-impact-drill-13mm-2211/": {
+      "url": "https://www.ronix.ir/product/corded-impact-drill-13mm-2211/",
+      "title": "دریل چکشی 13 میلی‌متر-600 وات-3000 دور بر دقیقه-آچاری",
+      "model": "2211",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "2626895687237617182f3caee160d35e0e4bad66a46c2a6440df25591b8ee8b0"
+    },
+    "https://www.ronix.ir/product/corded-impact-drill-13mm-650w-2213/": {
+      "url": "https://www.ronix.ir/product/corded-impact-drill-13mm-650w-2213/",
+      "title": "دریل چکشی 13 میلی‌متر-650 وات",
+      "model": "2213",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "be7ae39bb663015ba71c204262adf755c498db961e5ac87a7762f75513ccda46"
+    },
+    "https://www.ronix.ir/product/corded-impact-drill-13mm-750w-vega-series-2214/": {
+      "url": "https://www.ronix.ir/product/corded-impact-drill-13mm-750w-vega-series-2214/",
+      "title": "دریل چکشی 13 میلی‌متری 750 وات-آچاری",
+      "model": "2214",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "07422f76d46f058aba47d8095774f080011f048d5df21c7ff1b78463c2a70236"
+    },
+    "https://www.ronix.ir/product/corded-impact-drill-13mm-810w-with-bmc-2210/": {
+      "url": "https://www.ronix.ir/product/corded-impact-drill-13mm-810w-with-bmc-2210/",
+      "title": "دریل چکشی 13میلی متر-810وات-آچاری",
+      "model": "2210",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "72c604280adbfbc16f0938533df46b8681f903c56381637f33e69dac84e189fc"
+    },
+    "https://www.ronix.ir/product/corded-impact-wrench-2035/": {
+      "url": "https://www.ronix.ir/product/corded-impact-wrench-2035/",
+      "title": "بکس برقی 1/2 اینچ-900وات",
+      "model": "2035",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "0696aa75d3826e846329757d7c16d7c9c111c8667c033119650bf0c9fe2572b4"
+    },
+    "https://www.ronix.ir/product/electric-corded-drill-10mm-2112/": {
+      "url": "https://www.ronix.ir/product/electric-corded-drill-10mm-2112/",
+      "title": "دریل برقی 10میلی‌متری-450 وات",
+      "model": "2112",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "d8fbe4fe0098692cf47db14d63fff37d26a392b7db35e90abb3e19835a745b0e"
+    },
+    "https://www.ronix.ir/product/electric-corded-drill-10mm-350w-vega-series-2113/": {
+      "url": "https://www.ronix.ir/product/electric-corded-drill-10mm-350w-vega-series-2113/",
+      "title": "دریل برقی 10میلی متری-350 وات",
+      "model": "2113",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "21152b1658ed92c611484430dd05700e3b396dd46a2429fb1c57ca248078ed1b"
+    },
+    "https://www.ronix.ir/product/electric-corded-drill-10mm-400w-2110/": {
+      "url": "https://www.ronix.ir/product/electric-corded-drill-10mm-400w-2110/",
+      "title": "دریل برقی 10میلی‌متری-400 وات",
+      "model": "2110",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "3fe8a558a68d9c801b0cd043366dad1da381b445bdbe1eb7bef9ad4cb435ae9b"
     }
   },
-  "cursor": 15
+  "cursor": 10
 }
