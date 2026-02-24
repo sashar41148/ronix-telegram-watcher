@@ -216,7 +216,77 @@
       "model": "2110",
       "img": "/img/media/static-pages/image-not-found-og.webp",
       "fingerprint": "3fe8a558a68d9c801b0cd043366dad1da381b445bdbe1eb7bef9ad4cb435ae9b"
+    },
+    "https://www.ronix.ir/product/280lumen-outdoor-camping-lantern/": {
+      "url": "https://www.ronix.ir/product/280lumen-outdoor-camping-lantern/",
+      "title": "چراغ روشنایی فانوسی باطری خور 280 لومن",
+      "model": "RH-4297",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "415d087b9d42e5afb58afed476bd7d57493becf8ca005aa75abadf02a674161f"
+    },
+    "https://www.ronix.ir/product/2pcs-screwdriver-bit-holder-set/": {
+      "url": "https://www.ronix.ir/product/2pcs-screwdriver-bit-holder-set/",
+      "title": "ست دو عددی رابط مگنتی سری پیچ گوشتی",
+      "model": "RH-5455",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "7b2f6a22bb8ce2ea20a28a783a8cb31289ec0844609221cc375ddf7bc1322eff"
+    },
+    "https://www.ronix.ir/product/9pcs-screwdriver-bits-set/": {
+      "url": "https://www.ronix.ir/product/9pcs-screwdriver-bits-set/",
+      "title": "ست رابط و سری پیچ گوشتی 9 عددی",
+      "model": "RH-5454",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "6ac6e3fafab39e99930b865ab335e5344656a1a949a02da763383fd5880fee3b"
+    },
+    "https://www.ronix.ir/product/acrylic-paint-roller/": {
+      "url": "https://www.ronix.ir/product/acrylic-paint-roller/",
+      "title": "غلطک رنگ 9 اینچ اکریلیک",
+      "model": "RH-9955",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "5ba66e028f25a30461974080ad369c69d38e46188e97937a988735aa0f1cd3a8"
+    },
+    "https://www.ronix.ir/product/bench-polisher-with-drill-chuck-nylon-wheel-1300w/": {
+      "url": "https://www.ronix.ir/product/bench-polisher-with-drill-chuck-nylon-wheel-1300w/",
+      "title": "پولیش رومیزی 1300 وات",
+      "model": "3590",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "f0c1940fec33f590bb7c20b075d0685012479900a0a8c63a2796795cd419c41d"
+    },
+    "https://www.ronix.ir/product/camping-lantern/": {
+      "url": "https://www.ronix.ir/product/camping-lantern/",
+      "title": "چراغ فانوسی مینی",
+      "model": "RH-4227",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "2f06a2a872d2022a1228788a0cb9c8a1b7e3c19313f4c5625f3ac198f6bd8830"
+    },
+    "https://www.ronix.ir/product/car-dome-light/": {
+      "url": "https://www.ronix.ir/product/car-dome-light/",
+      "title": "چراغ هشدار شش‌ضلعی مدل Dome",
+      "model": "RH-4225",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "76ee4f3e361e4c6104b2ed07b071c00c9be5ca01104b326efb57c3ae46fb6727"
+    },
+    "https://www.ronix.ir/product/lighted-mechanical-pickup-tool/": {
+      "url": "https://www.ronix.ir/product/lighted-mechanical-pickup-tool/",
+      "title": "فنر مشکل گشا چراغ دار",
+      "model": "RH-4295",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "23ef4d6906b576cc63aef113b3991e5dc45e34f86690ddd1dfdaa4471d58f1a0"
+    },
+    "https://www.ronix.ir/product/magnetic-pocket-work-light/": {
+      "url": "https://www.ronix.ir/product/magnetic-pocket-work-light/",
+      "title": "چراغ کار مینی مگنتی آویز دار 500 لومن مدل FLUX",
+      "model": "RH-4222",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "f908c36fbc70d449c84d4d4b4b9221ce62fee6963b4fda7465496b15faa9bc9a"
+    },
+    "https://www.ronix.ir/product/mechanical-pickup-tool/": {
+      "url": "https://www.ronix.ir/product/mechanical-pickup-tool/",
+      "title": "فنر مشکل گشا",
+      "model": "RH-4296",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "6f27752ea6b89acadd0d79418485a1c00a53ed223e8dd7bfa4833c32565bbf71"
     }
   },
-  "cursor": 15
+  "cursor": 10
 }
