@@ -286,7 +286,42 @@
       "model": "RH-4296",
       "img": "/img/media/static-pages/image-not-found-og.webp",
       "fingerprint": "6f27752ea6b89acadd0d79418485a1c00a53ed223e8dd7bfa4833c32565bbf71"
+    },
+    "https://www.ronix.ir/product/mini-angle-grinder-900w/": {
+      "url": "https://www.ronix.ir/product/mini-angle-grinder-900w/",
+      "title": "مینی فرز 125 میلی متری 900 وات",
+      "model": "3115",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "9a31a5e8f0b7267a1be9af4e74dc882e59618d0b64d89805be46c1d99fe6be90"
+    },
+    "https://www.ronix.ir/product/pallet-truck-3ton/": {
+      "url": "https://www.ronix.ir/product/pallet-truck-3ton/",
+      "title": "جک پالت 3 تن",
+      "model": "RH-4980",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "014c9fc82df7b715040f11aae2a1c9c1d7eef6498dfee9bc5c30b6b775eba449"
+    },
+    "https://www.ronix.ir/product/pallet-truck/": {
+      "url": "https://www.ronix.ir/product/pallet-truck/",
+      "title": "جک پالت 2 تن",
+      "model": "RH-4979",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "5c11f27b089dba109d4251a89c41c07a7daf67d820edcddf3438e1e3f4fa20c6"
+    },
+    "https://www.ronix.ir/product/sander-pad-180-mm/": {
+      "url": "https://www.ronix.ir/product/sander-pad-180-mm/",
+      "title": "صفحه پولیش پلاستیکی چسب دار 180 میلی متری",
+      "model": "RH-3517",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "cad4a690f24e13d490e044b80e81f8fe09241c651971f665d5c89215f652b673"
+    },
+    "https://www.ronix.ir/product/self-priming-pump-1hp/": {
+      "url": "https://www.ronix.ir/product/self-priming-pump-1hp/",
+      "title": "الکتروپمپ 1 اسب بخار محیطی",
+      "model": "RH-4023",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "6582f5141aa1668c2a991638ea4bcd5a629a33822ad0deb879de6dac89aff54e"
     }
   },
-  "cursor": 10
+  "cursor": 15
 }
