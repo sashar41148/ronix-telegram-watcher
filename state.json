@@ -321,7 +321,49 @@
       "model": "RH-4023",
       "img": "/img/media/static-pages/image-not-found-og.webp",
       "fingerprint": "6582f5141aa1668c2a991638ea4bcd5a629a33822ad0deb879de6dac89aff54e"
+    },
+    "https://www.ronix.ir/product/8-flat-file/": {
+      "url": "https://www.ronix.ir/product/8-flat-file/",
+      "title": "سوهان تخت 8 اینچ",
+      "model": "RH-2500",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "48cc2ef4004664576325e39bf7222ed83b929c1cc60d06351955d91c3158b018"
+    },
+    "https://www.ronix.ir/product/electric-hvlp-floor-based-spray-gun-800w/": {
+      "url": "https://www.ronix.ir/product/electric-hvlp-floor-based-spray-gun-800w/",
+      "title": "پیستوله برقی 800وات HVLP",
+      "model": "1380",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "0b53507db6b75497f68204591efc6cadf0b3938c5201c1a25434ea97b13aca71"
+    },
+    "https://www.ronix.ir/product/electric-mini-circular-saw-710w-125mm/": {
+      "url": "https://www.ronix.ir/product/electric-mini-circular-saw-710w-125mm/",
+      "title": "اره گرد مینی 125 میلیمتری 710 وات",
+      "model": "4312",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "21ecea31e83d089e0cc5406c8d4e9fa981a5c2cf458935683c348449d66a10f9"
+    },
+    "https://www.ronix.ir/product/engine-stand-jack/": {
+      "url": "https://www.ronix.ir/product/engine-stand-jack/",
+      "title": "جک استند موتور تاشو",
+      "model": "RH-4951",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "39ed8a055b4be08b819ecfb443f157101ed4ca83daed7e4ea638dca824c5e0a8"
+    },
+    "https://www.ronix.ir/product/induction-high-pressure-washer-180-bar/": {
+      "url": "https://www.ronix.ir/product/induction-high-pressure-washer-180-bar/",
+      "title": "کارواش صنعتی 180 بار کالسکه‌ای",
+      "model": "RP-0181",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "dfb19418a049eda91e1b46cd37021a133037c84d04ece0e5a79380ea82085a3e"
+    },
+    "https://www.ronix.ir/product/rechargeable-multifunctional-working-light-1700lm/": {
+      "url": "https://www.ronix.ir/product/rechargeable-multifunctional-working-light-1700lm/",
+      "title": "چراغ کار مگنت دار دو طرفه شارژی 1700 لومن",
+      "model": "RH-4238",
+      "img": "/img/media/static-pages/image-not-found-og.webp",
+      "fingerprint": "c8e82c30d2435522735735ca5692a59e2244f8b88e0686a5a0ec563b8e6ccea5"
     }
   },
-  "cursor": 15
+  "cursor": 10
 }
