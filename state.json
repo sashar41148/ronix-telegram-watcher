@@ -138,14 +138,14 @@
       "title": "پیستوله برقی 650وات HVLP",
       "model": "1365",
       "img": "/img/media/static-pages/image-not-found-og.webp",
-      "fingerprint": "376b75f5ac7b02785c8c8fd341b01d5831fc90df09b8213e4a9a154cae54d9b4"
+      "fingerprint": "a97782b51ec4ab3bafe2c79e013d31bc00e406d8c53ae36077c35cbeef7d2b1a"
     },
     "https://www.ronix.ir/product/hvlp-electric-spray-gun-950w-1395/": {
       "url": "https://www.ronix.ir/product/hvlp-electric-spray-gun-950w-1395/",
       "title": "پیستوله برقی 950 وات خرطومی HVLP",
       "model": "1395",
       "img": "/img/media/static-pages/image-not-found-og.webp",
-      "fingerprint": "510636ea059fc54d017fc29fa60cb843d8a8c732726e1a0621de0eb95cc76567"
+      "fingerprint": "f98b392365ae911eda2e8dad4ad70eec5de3f64076b5058b9c71febce8605d6e"
     },
     "https://www.ronix.ir/product/corded-impact-drill-10mm-400w-vega-series-2121/": {
       "url": "https://www.ronix.ir/product/corded-impact-drill-10mm-400w-vega-series-2121/",
@@ -365,5 +365,5 @@
       "fingerprint": "c8e82c30d2435522735735ca5692a59e2244f8b88e0686a5a0ec563b8e6ccea5"
     }
   },
-  "cursor": 10
+  "cursor": 15
 }
